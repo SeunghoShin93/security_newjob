@@ -53,11 +53,15 @@
       #news_title {
         font-family: Noto Sans KR;
       }
+      .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+        background-color: #343a40;
+      }
+      #topButton {position: fixed; right: 5%; bottom: 50px; z-index: 999;}
     </style>
   </head>
 
   <body>
-    <h1><pre>  </pre> 서비스 제목입니다</h1>
+    <h1><pre></pre> 서비스 제목입니다 <pre> </pre></h1>
     {% comment %} <div><title>Hello, world!</title></div> {% endcomment %}
 
     {% block content %} {% endblock content %}

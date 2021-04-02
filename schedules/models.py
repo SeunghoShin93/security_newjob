@@ -2,10 +2,28 @@ from django.db import models
 
 # Create your models here.
 
-class News(models.Model):
+class Article(models.Model):
     id = models.IntegerField(primary_key=True)
-    title = models.CharField(max_length=200)
-    link = models.CharField(max_length=200)
-    time = models.DateTimeField(auto_now_add=True)
+    title = models.CharField(max_length=1000)
+    link = models.CharField(max_length=1000)
+    homepage = models.CharField(max_length=1000)
+    time = models.DateTimeField()
+    
+    class Meta:
+        db_table = 'article'
+
+
+    def __str__(self):
+        return self.title
+
+class Job(models.Model):
+    id = models.IntegerField(primary_key=True)
+    company = models.CharField(max_length=1000)
+    title = models.CharField(max_length=1000)
+    link = models.CharField(max_length=1000)
+    end_date = models.CharField(max_length=1000)
+    time = models.DateTimeField()
+    class Meta:
+        db_table = 'job'
     def __str__(self):
         return self.title
