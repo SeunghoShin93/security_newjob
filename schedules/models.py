@@ -6,6 +6,7 @@ class Article(models.Model):
     id = models.IntegerField(primary_key=True)
     title = models.CharField(max_length=1000)
     link = models.CharField(max_length=1000)
+    image = models.CharField(max_length=1000)
     homepage = models.CharField(max_length=1000)
     time = models.DateTimeField()
     
