@@ -66,12 +66,22 @@
       #topButton {position: fixed; right: 5%; bottom: 50px; z-index: 999;}
       .titlebox {
         margin-top: 20px;
+        margin-left: 20px;
+      }
+
+      .navbar {
+        position: fixed; 
+        top:0; 
+        width: 100%; 
+        z-index: 999;
+        opacity: 0.9;
       }
     </style>
   </head>
 
   <body>
-    <h1><pre></pre> 서비스 제목입니다 <pre> </pre></h1>
+    {% include 'schedules/navbar.html' %}
+    <h1><pre></pre> <pre> </pre></h1>
     {% comment %} <div><title>Hello, world!</title></div> {% endcomment %}
 
     {% block content %} {% endblock content %}

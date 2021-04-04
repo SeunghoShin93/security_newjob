@@ -1,7 +1,7 @@
 <div>
     <div class="list-group">
         <div class="topbar">
-        <h3 class="top-title" ><b>최신 기사 목록</b></h3>
+        <h3 class="top-title" ><b>전체 기사 목록</b></h3>
         </div>
     {% for article in articles %}
         <a
@@ -13,7 +13,7 @@
         <div class="thumbbox">
         <img src="{{ article.image }}" class="thumbnail"/>
       </div>
-        <pre>  </pre>
+        
         <div class="titlebox">
         <h5 id="news_title" class="mb-1">{{ article.title }}</h5>
       </div>
