@@ -106,11 +106,13 @@
       }
 
       .navbar {
-        position: fixed; 
+        position: sticky; 
         top:0; 
         width: 100%; 
         z-index: 999;
         opacity: 0.9;
+        font-family: 'Noto Sans KR';
+        font-size: larger;
       }
 
       .pagination {
@@ -123,8 +125,22 @@
 
       .carousel-box {
         height:100%;
+        margin-top: -50px;
         margin-bottom: 100px;
         animation: fadein 3s;
+      }
+
+      .intro-box {
+        margin :auto;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        border-radius: 5px;
+        border: 5px whitesmoke;
+        width: 70%;
+        height: 100%;
+        background-color: white;
       }
     </style>
   </head>

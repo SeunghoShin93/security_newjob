@@ -41,3 +41,7 @@ def carousel(request):
     third = Article.objects.filter(homepage='dailysecu').order_by('id').first()
     context = { 'first':first, 'second':second, 'third': third}
     return render(request, 'schedules/carousel.html', context)
+
+def introduce(request):
+
+    return render(request, 'schedules/introduce.html')
