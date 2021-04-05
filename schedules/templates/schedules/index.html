@@ -17,11 +17,32 @@
 </ul>
 </div>
 <div class="tab-content" id="myTabContent">
-  <div class="tab-pane fade show active" id="news" role="tabpanel" aria-labelledby="news-tab">{% include 'schedules/news_group.html' %}</div>
+  <div class="tab-pane fade show active" id="news" role="tabpanel" aria-labelledby="news-tab">
+    {% include 'schedules/paged_news.html' %}
+    </div>
   <div class="tab-pane fade" id="jobs" role="tabpanel" aria-labelledby="jobs-tab">{% include 'schedules/jobs_group.html' %}</div>
 </div>
 
 <div class="blank"></div>
 <div id="topButton" style="cursor: pointer"><a href="#"><img src="{% static 'schedules/images/topbutton.png' %}" id="topButtonImg"></a></div>
 </div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+</script>
+<script type="text/javascript">
+  localStorage.setItem('testvar', 'haha')
+  $(function () {
+      // for bootstrap 3 use 'shown.bs.tab', for bootstrap 2 use 'shown' in the next line
+      $('button[data-bs-toggle="tab"]').on('shown.bs.tab', function (e) {
+        // save the latest tab; use cookies if you like 'em better:
+        localStorage.setItem('lastTab', $(this).attr('data-bs-target'));
+      });
+
+      // go to the latest tab, if it exists:
+      var lastTab = localStorage.getItem('lastTab');
+      if (lastTab) {
+        $('[data-bs-target="' + lastTab + '"]').tab('show');
+      }
+    });
+</script>
 {% endblock content %}
